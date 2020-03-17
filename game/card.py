@@ -19,6 +19,9 @@ class Card:
     def getSpellType(self):
         return self.__spellType
 
+    def isSelfTarget(self):
+        return self.__isSelfTarget
+
     def getAbilityDiscription(self):
         return self.__abilityDescription
 
@@ -27,11 +30,3 @@ card1 = Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage')
 card2 = Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage')
 card3 = Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana')
 card4 = Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana')
-card5 = Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage')
-card6 = Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage')
-card7 = Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana')
-card8 = Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana')
-card9 = Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage')
-card10 = Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage')
-card11 = Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana')
-card12 = Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana')

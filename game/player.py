@@ -1,8 +1,8 @@
 class Player:
 
     def __init__(self, name, deck):
-        self.__deck = deck
         self.__name = name
+        self.__deck = deck
         self.__lifeTotal = 30
         self.__manaTotal = 30
 

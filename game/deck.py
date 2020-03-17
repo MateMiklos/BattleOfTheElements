@@ -3,22 +3,28 @@ import card
 
 class Deck:
 
-    __deckSize = 40
+    maxDeckSize = 40
 
     def __init__(self):
         self.cards = []
+        self.board = []
+        self.boardSize = 4
+        self.onGoings = []
+        self.onGoingsSize = 4
+        self.discardPile = []
 
 
-deck = Deck()
-deck.cards.append(card.card1)
-deck.cards.append(card.card2)
-deck.cards.append(card.card3)
-deck.cards.append(card.card4)
-deck.cards.append(card.card5)
-deck.cards.append(card.card6)
-deck.cards.append(card.card7)
-deck.cards.append(card.card8)
-deck.cards.append(card.card9)
-deck.cards.append(card.card10)
-deck.cards.append(card.card11)
-deck.cards.append(card.card12)
+# DECK BUILDING
+
+deck1 = Deck()
+deck2 = Deck()
+
+for i in range(10):
+    deck1.cards.append(card.Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage'))
+    deck1.cards.append(card.Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage'))
+    deck1.cards.append(card.Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana'))
+    deck1.cards.append(card.Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana'))
+    deck2.cards.append(card.Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage'))
+    deck2.cards.append(card.Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage'))
+    deck2.cards.append(card.Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana'))
+    deck2.cards.append(card.Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana'))
