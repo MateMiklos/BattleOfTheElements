@@ -11,6 +11,7 @@ def build_game_data():
 def create_json_data():
     game = build_game_data()
     data = {'game': {
+                'turn': game.turn,
                 'player1': {
                     'name': game.player1.getName(),
                     'lifeTotal': game.player1.getLifeTotal(),
@@ -20,20 +21,20 @@ def create_json_data():
                         'board': fill_cards_with_converted_cards(game.player1.getDeck().board),
                         'ongoings': fill_cards_with_converted_cards(game.player1.getDeck().ongoings),
                         'discardPile': fill_cards_with_converted_cards(game.player1.getDeck().discardPile)
-                    }
-                },
+                        }
+                    },
                 'player2': {
                     'name': game.player2.getName(),
                     'lifeTotal': game.player2.getLifeTotal(),
                     'manaTotal': game.player2.getManaTotal(),
                     'deck': {
-                        'cards': [],
-                        'board': [],
-                        'ongoings': [],
-                        'discardPile': []
+                        'cards': fill_cards_with_converted_cards(game.player2.getDeck().cards),
+                        'board': fill_cards_with_converted_cards(game.player2.getDeck().board),
+                        'ongoings': fill_cards_with_converted_cards(game.player2.getDeck().ongoings),
+                        'discardPile': fill_cards_with_converted_cards(game.player2.getDeck().discardPile)
+                        }
                     }
                 }
-            }
             }
     return data
 

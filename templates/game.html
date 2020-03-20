@@ -10,10 +10,15 @@
                 <button id="startGameButton">Start Game</button>
             </div>
             <div id="title-field">
-                <div id="turn-box"></div>
+                <div id="turn-box">Turn: {{ data.game.turn }}</div>
             </div id="row">
-                <div id="side-box"></div>
+                <div id="side-box">
+                    Player: {{ data.game.player1.name }}
+                    Life: {{ data.game.player1.lifeTotal }}
+                    Mana: {{ data.game.player1.manaTotal }}
+                </div>
                 <div id="mid-box"></div>
+                    <button id="inputButton">input</button>
                 <div id="side-box"></div>
             </div>
             </div id="row">
@@ -22,7 +27,11 @@
                 <div id="side-box"></div>
             </div>
             </div id="row">
-                <div id="side-box"></div>
+                <div id="side-box">
+                    Player: {{ data.game.player2.name }}
+                    Life: {{ data.game.player2.lifeTotal }}
+                    Mana: {{ data.game.player2.manaTotal }}
+                </div>
                 <div id="mid-box"></div>
                 <div id="side-box"></div>
             </div>

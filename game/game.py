@@ -19,6 +19,7 @@ def createPlayers():
     players.append(player1, player2)
     return players
 
+
 # GAME MECHANICS
 
 

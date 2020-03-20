@@ -1,3 +1,6 @@
+from random import randint
+
+
 # ===== CARD CLASS ===== #
 
 
@@ -35,8 +38,8 @@ class Deck:
         self.cards = []
         self.board = []
         self.boardSize = 4
-        self.onGoings = []
-        self.onGoingsSize = 4
+        self.ongoings = []
+        self.ongoingsSize = 4
         self.discardPile = []
 
 
@@ -117,3 +120,18 @@ def buildPlayers(decks):
 def buildGame(players):
     game = Game(players)
     return game
+
+
+# ===== GAME MECHANICS ===== #
+
+
+def dealBoard(deck):
+    for i in range(deck.boardSize):
+        try:
+            randIndex = randint(0, len(deck.cards) - 1)
+            deck.board.append(deck.cards[randIndex])
+            deck.cards.remove(deck.cards[randIndex])
+        except ValueError:
+            for card in deck.cards:
+                deck.board.append(card)
+                deck.cards.remove(card)
