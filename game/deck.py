@@ -28,3 +28,4 @@ for i in range(10):
     deck2.cards.append(card.Card('Spring', 4, 'WATER', 'INSTANT', 'Heals 6 damage'))
     deck2.cards.append(card.Card('Sprint', 1, 'AIR', 'INSTANT', 'Gain 3 mana'))
     deck2.cards.append(card.Card('Immobilize', 2, 'EARTH', 'INSTANT', 'Drain 3 mana'))
+deck1.cards.append(card.Card('Fireball', 4, 'FIRE', 'INSTANT', 'Deals 6 damage'))

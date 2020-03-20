@@ -1,3 +1,4 @@
-document.getElementById("myButton").addEventListener("click", function () {
+document.getElementById("newGameButton").addEventListener("click", function () {
     console.log("The button is cliccced")
+    
 });

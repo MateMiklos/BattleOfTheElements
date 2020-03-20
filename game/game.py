@@ -12,14 +12,26 @@ deck1 = player1.getDeck()
 deck2 = player2.getDeck()
 
 
+def createPlayers():
+    players = []
+    player1 = player.Player("Player1", deck.deck1)
+    player2 = player.Player("Player2", deck.deck2)
+    players.append(player1, player2)
+    return players
+
 # GAME MECHANICS
 
 
 def dealBoard(deck):
     for i in range(deck.boardSize):
-        randIndex = randint(0, len(deck.cards) - 1)
-        deck.board.append(deck.cards[randIndex])
-        deck.cards.remove(deck.cards[randIndex])
+        try:
+            randIndex = randint(0, len(deck.cards) - 1)
+            deck.board.append(deck.cards[randIndex])
+            deck.cards.remove(deck.cards[randIndex])
+        except ValueError:
+            for card in deck.cards:
+                deck.board.append(card)
+                deck.cards.remove(card)
 
 
 def selectCard(board, player, playerInput):
