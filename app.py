@@ -29,7 +29,7 @@ def route_user_input(userinput):
 
 @app.route('/postmethod', methods=['POST'])
 def get_post_javascript_data():
-    jsdata = request.form['javascript_data']
+    jsdata = request.form['answer']
     print(jsdata)
     return jsdata
 

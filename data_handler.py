@@ -20,7 +20,9 @@ def create_json_data():
                         'cards': fill_cards_with_converted_cards(game.player1.getDeck().cards),
                         'board': fill_cards_with_converted_cards(game.player1.getDeck().board),
                         'ongoings': fill_cards_with_converted_cards(game.player1.getDeck().ongoings),
-                        'discardPile': fill_cards_with_converted_cards(game.player1.getDeck().discardPile)
+                        'discardPile': fill_cards_with_converted_cards(game.player1.getDeck().discardPile),
+                        'boardSize': game.player1.getDeck().boardSize,
+                        'ongoingsSize': game.player1.getDeck().ongoingsSize
                         }
                     },
                 'player2': {
@@ -31,7 +33,9 @@ def create_json_data():
                         'cards': fill_cards_with_converted_cards(game.player2.getDeck().cards),
                         'board': fill_cards_with_converted_cards(game.player2.getDeck().board),
                         'ongoings': fill_cards_with_converted_cards(game.player2.getDeck().ongoings),
-                        'discardPile': fill_cards_with_converted_cards(game.player2.getDeck().discardPile)
+                        'discardPile': fill_cards_with_converted_cards(game.player2.getDeck().discardPile),
+                        'boardSize': game.player1.getDeck().boardSize,
+                        'ongoingsSize': game.player1.getDeck().ongoingsSize
                         }
                     }
                 }
@@ -43,7 +47,7 @@ def convert_cards(card):
     converted_card = {
         'name': card.getName(),
         'manacost': card.getManacost(),
-        'elemntType': card.getElementType(),
+        'elementType': card.getElementType(),
         'spellType': card.getSpellType(),
         'abilityDescription': card.getAbilityDescription()
     }

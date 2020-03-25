@@ -1,0 +1,78 @@
+.card {
+    float: left;
+    margin: 2 auto;
+    margin-left: 2;
+    background-color: whitesmoke;
+    border-style: groove;
+    border-color: black;
+    width: 130px;
+    height: 184px;
+}
+
+.cardTitleRow {
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.cardImg {
+    margin-top: 2px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 80px;
+    background-color: darksalmon;
+}
+
+.cardTypeRow {
+    margin-top: 2px;
+}
+
+.cardDescription {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.castButton {
+    float: inline-end;
+    margin-bottom: 0px;
+}
+
+
+.row {
+    width: 1600px;
+    height: 200px;
+}
+
+
+.left-side-box {
+    float: left;
+    background-color: whitesmoke;
+    border-style: groove;
+    border-color: black;
+    width: 191px;
+    height: 198px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.right-side-box {
+    float: left;
+    background-color: whitesmoke;
+    border-style: groove;
+    border-color: black;
+    width: 191px;
+    height: 198px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.mid-box {
+    float: left;
+    background-color: whitesmoke;
+    border-style: groove;
+    border-color: black;
+    width: 1200px;
+    height: 198px;
+    text-align: center;
+    font-size: 15px;
+}

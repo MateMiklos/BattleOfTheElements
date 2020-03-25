@@ -1,44 +1,71 @@
 <html>
 <head>
     <title>Battle of the Elements</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/game.css">
     <script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
 </head>
 <body>
     <div id="game">
         <div id="game-field">
-            </div id="navbar">
+            <div id="navbar">
                 <button id="startGameButton">Start Game</button>
             </div>
             <div id="title-field">
                 <div id="turn-box">Turn: {{ data.game.turn }}</div>
-            </div id="row">
-                <div id="side-box">
-                    Player: {{ data.game.player1.name }}
-                    Life: {{ data.game.player1.lifeTotal }}
-                    Mana: {{ data.game.player1.manaTotal }}
+            <div class="row">
+                <div class="left-side-box">
+                    <table>
+                        <tr>
+                            <td>Player:</td>
+                            <td>{{ data.game.player1.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Life:</td>
+                            <td>{{ data.game.player1.lifeTotal }}</td>
+                        </tr>
+                        <tr>
+                            <td>Mana:</td>
+                            <td>{{ data.game.player1.manaTotal }}</td>
+                        </tr>
+                    </table>
                 </div>
-                <div id="mid-box"></div>
-                    <button id="inputButton">input</button>
-                <div id="side-box"></div>
-            </div>
-            </div id="row">
-                <div id="side-box"></div>
-                <div id="mid-box"></div>
-                <div id="side-box"></div>
-            </div>
-            </div id="row">
-                <div id="side-box">
-                    Player: {{ data.game.player2.name }}
-                    Life: {{ data.game.player2.lifeTotal }}
-                    Mana: {{ data.game.player2.manaTotal }}
+                <div class="mid-box">
                 </div>
-                <div id="mid-box"></div>
-                <div id="side-box"></div>
+                <div class="right-side-box"></div>
             </div>
-            </div id="row">
-                <div id="side-box"></div>
-                <div id="mid-box"></div>
-                <div id="side-box"></div>
+            <div class="row">
+                <div class="left-side-box">
+                    <div class="card"></div>
+                </div>
+                <div class="mid-box"></div>
+                <div class="right-side-box"></div>
+            </div>
+            <div class="row">
+                <div class="left-side-box">
+                    <table>
+                        <tr>
+                            <td>Player:</td>
+                            <td>{{ data.game.player2.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Life:</td>
+                            <td>{{ data.game.player2.lifeTotal }}</td>
+                        </tr>
+                        <tr>
+                            <td>Mana:</td>
+                            <td>{{ data.game.player2.manaTotal }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mid-box"></div>
+                <div class="right-side-box"></div>
+            </div>
+            <div class="row">
+                <div class="left-side-box">
+                    <div class="card"></div>
+                </div>
+                <div class="mid-box"></div>
+                <div class="right-side-box"></div>
             </div>
         </div>
     </div>
